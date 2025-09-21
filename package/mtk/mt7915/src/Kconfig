@@ -1,8 +1,8 @@
 config WIRELESS_MT7915
 	tristate "MT7915 Wireless driver"
+	depends on RALINK
 	help
 	  This driver supports MT7915 WIRELESS DRIVER
-
 
 config SUPPORT_OPENWRT
 	bool
@@ -398,7 +398,7 @@ config TXBF_SUPPORT
 config FAST_NAT_SUPPORT
        bool "Fast-NAT support"
 #       depends on RA_HW_NAT_WIFI
-       default y
+       default n
 
 config WHNAT_SUPPORT
 	tristate "Wifi Hardware NAT support"
@@ -406,7 +406,7 @@ config WHNAT_SUPPORT
 	depends on WLAN_HOOK
 	depends on FAST_NAT_SUPPORT
 	depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat
-	default y
+	default n
 
 config WARP_V2
 	bool "Warp driver version 2 support"
