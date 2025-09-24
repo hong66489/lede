@@ -180,7 +180,7 @@
 	mtketh-lan = "eth0";
 	ext-devices = "wlan0","wlan1","rax0","ra0", "rai0","apclii0","apclix0", "apcli0";
 	mtketh-max-gmac = <2>;
-	/delete-property/ mtkdsa-wan-port;
+        status = "okay";
 };
 
 &switch0 {

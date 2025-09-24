@@ -197,7 +197,7 @@ ramips_setup_macs()
 	fcj,g-ax1800-f|\
 	xiaomi,mi-router-cr660x)
 		lan_mac=$(cat /sys/class/net/eth0/address)
-		wan_mac=$(macaddr_add "$lan_mac" -1)
+		wan_mac=$(mtd_get_mac_binary factory 0x3fffa)
 		;;
 	h3c,tx1800-plus|\
 	h3c,tx1801-plus|\
