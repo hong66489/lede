@@ -1902,7 +1902,7 @@ define Device/xiaomi_mi-router-cr660x
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   UBINIZE_OPTS := -E 5
-  KERNEL_SIZE := 4096k
+  KERNEL_SIZE := 5120k
   IMAGE_SIZE := 128512k
   IMAGES += factory.bin
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
