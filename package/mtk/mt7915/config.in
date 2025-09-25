@@ -331,7 +331,7 @@ config MTK_THERMAL_PROTECT_SUPPORT
 config MTK_SCS_FW_OFFLOAD
         bool "SCS FW OFFLOAD Support"
         depends on MTK_WIFI_DRIVER && MTK_SMART_CARRIER_SENSE_SUPPORT
-        default n
+        default y
 
 config MTK_MT_DFS_SUPPORT
 	bool "Dynamic Frequency Selection Support"
@@ -342,7 +342,7 @@ config MTK_OFFCHANNEL_SCAN_FEATURE
 	bool "Channel Quality Monitor"
 	depends on MTK_WIFI_DRIVER
 	depends on MTK_MT_AP_SUPPORT
-	default y
+	default n
 
 #config WFA_VHT_R2_PF
 #	bool "WFA VHT R2 Plugfest"
@@ -517,7 +517,7 @@ config MTK_RTMP_FLASH_SUPPORT
 config MTK_PRE_CAL_TRX_SET1_SUPPORT
 	bool "Calibration To Flash/BinFile Support"
 	depends on MTK_WIFI_DRIVER
-	default y
+	default n
 
 config MTK_RLM_CAL_CACHE_SUPPORT
 	bool "RlmCalibrationCache Support"
@@ -621,7 +621,7 @@ config MTK_DPP_SUPPORT
         depends on MTK_WIFI_DRIVER
         depends on MTK_MT_AP_SUPPORT
         select MTK_DOT11W_PMF_SUPPORT
-        default y
+        default n
 
 config MTK_TCP_RACK_SUPPORT
 	bool "TCP Reduced ACK  support"
@@ -634,7 +634,7 @@ config MTK_RED_SUPPORT
         bool "RED(Random Early Drop) support"
 	depends on MTK_WIFI_DRIVER
 	depends on MTK_MT_AP_SUPPORT || MTK_MT_STA_SUPPORT
-        default y
+        default n
 
 config MTK_FQ_SCH_SUPPORT
         bool "Fair Queueing support"
@@ -865,7 +865,7 @@ config MTK_ENTERPRISE_AP_SUPPORT
 config MTK_MLME_MULTI_QUEUE_SUPPORT
 	bool "Mlme MultiQueue Support"
 	depends on MTK_MT_AP_SUPPORT
-	default y
+	default n
 
 config MTK_WIFI_EAP_FEATURE
 	bool "EAP Feature"
@@ -877,7 +877,7 @@ config MTK_WIFI_EAP_FEATURE
 config MTK_VLAN_SUPPORT
 	bool "VLAN Support"
 	depends on MTK_WIFI_EAP_FEATURE
-	default y
+	default n
 
 #TxRx Statistic
 config MTK_TXRX_STAT_SUPPORT
@@ -895,13 +895,13 @@ config MTK_SNIFFER_SUPPORT
 config MTK_ANTENNA_CONTROL_SUPPORT
 	bool "Antenna Control"
 	depends on MTK_WIFI_EAP_FEATURE
-	default y
+	default n
 
 #Mgmt Tx Power
 config MTK_MGMT_TXPWR_CTRL
 	bool "Mgmt TxPower Control"
 	depends on MTK_WIFI_EAP_FEATURE
-	default y
+	default n
 
 #RA_PHY_RATE
 config MTK_RA_PHY_RATE_SUPPORT
@@ -913,7 +913,7 @@ config MTK_RA_PHY_RATE_SUPPORT
 config MTK_AMPDU_CONF_SUPPORT
 	bool "AMPDU Config retry & agglimitSupport"
 	depends on MTK_WIFI_EAP_FEATURE
-	default y
+	default n
 
 #ACK CTS Timeout
 config MTK_ACK_CTS_TIMEOUT_SUPPORT
@@ -991,7 +991,7 @@ config MTK_MIN_PHY_RATE_SUPPORT
 config MTK_FAST_UP_RATE_SUPPORT
         bool "Fast UP rate support"
         depends on MTK_MT_AP_SUPPORT
-        default y
+        default n
 
 config MTK_CON_WPS_SUPPORT
 	bool "Concurrent WPS Support"
@@ -1060,7 +1060,7 @@ config MTK_RADIUS_ACCOUNTING_SUPPORT
 config MTK_GREENAP_SUPPORT
 	bool "GreenAP Support"
 	depends on MTK_MT_AP_SUPPORT
-	default y
+	default n
 
 config MTK_VENDOR_FEATURE11_SUPPORT
         bool "Vendor11 Feature Enable"
@@ -1101,7 +1101,7 @@ config MTK_WNM_SUPPORT
 config MTK_INTERWORKING
         bool "802.11u Interworking"
         depends on MTK_MT_AP_SUPPORT
-        default n
+        default y
 
 #config ROAMING_ENHANCE_SUPPORT
 #	bool "Roaming Enhance Support"
@@ -1111,7 +1111,7 @@ config MTK_INTERWORKING
 
 config MTK_LINUX_NET_TXQ_SUPPORT
 	bool "NET TX Queue Support"
-	default n
+	default y
 
 config MTK_HWIFI_SUPPORT
 	bool "hardware wifi abstraction layer support"
