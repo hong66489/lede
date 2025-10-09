@@ -587,7 +587,7 @@ config MTK_OCE_SUPPORT
 	depends on MTK_MT_AP_SUPPORT
 	depends on MTK_MBO_SUPPORT
 	depends on MTK_CHIP_MT7915
-	default n
+	default y
 
 config MTK_MAP_SUPPORT
         bool "MAP Support"
@@ -646,7 +646,7 @@ config MTK_FQ_SCH_SUPPORT
 config MTK_CTXD_MEM_CPY_SUPPORT
 	bool "CTXD(sw mode) support"
 	depends on MTK_WIFI_DRIVER
-	default n
+	default y
 
 config MTK_CTXD_SCATTER_AND_GATHER_SUPPORT
         bool "CTXD(hw mode) support"
