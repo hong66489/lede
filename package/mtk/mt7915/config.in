@@ -289,12 +289,12 @@ config MTK_BRCM_256QAM_SUPPORT
 	bool "BRCM 2.4G 256QAM support"
 	depends on MTK_WIFI_DRIVER
 	depends on MTK_G_BAND_256QAM_SUPPORT
-	default y
+	default n
 
 config MTK_VHT_TXBF_2G_EPIGRAM_IE_SUPPORT
     bool "BRCM 2.4G VHT Sounding support"
 	depends on MTK_WIFI_DRIVER
-	default y
+	default n
 		
 config MTK_TPC_SUPPORT
 	bool "802.11h TPC Support"
@@ -403,7 +403,7 @@ config MTK_TXBF_SUPPORT
 config MTK_FAST_NAT_SUPPORT
        bool "Fast-NAT support"
 #       depends on RA_HW_NAT_WIFI
-       default n
+       default y
 
 config MTK_WHNAT_SUPPORT
 	tristate "Wifi Hardware NAT support"
@@ -840,7 +840,7 @@ config MTK_MUMIMO_SUPPORT
 config  MTK_MUMIMO_PLATFORM_PERFORMANCE_LEVEL
         int "MU-MIMO Platform Performance Level. Suggest 1 for MT7621 and 2 for MT7622"
         depends on MTK_MUMIMO_SUPPORT
-        default 2
+        default 1
 
 config MTK_MU_RA_SUPPORT
   	bool "MU-RGA Support"
@@ -1050,7 +1050,7 @@ config MTK_LED_CONTROL_SUPPORT
 config MTK_WLAN_HOOK
        bool "WLAN hook Support"
        depends on MTK_WIFI_DRIVER
-       default n
+       default y
 
 config MTK_RADIUS_ACCOUNTING_SUPPORT
 	bool "Radius Accounting Support"
