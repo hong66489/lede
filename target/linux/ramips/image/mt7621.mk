@@ -726,7 +726,7 @@ define Device/fcj_g-ax1800-f
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
   IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
 	check-size
-  DEVICE_PACKAGES := kmod-mt7915-firmware uboot-envtools
+  DEVICE_PACKAGES := kmod-mt_wifi luci-app-mtwifi wireless-tools uboot-envtools
 endef
 TARGET_DEVICES += fcj_g-ax1800-f
 
