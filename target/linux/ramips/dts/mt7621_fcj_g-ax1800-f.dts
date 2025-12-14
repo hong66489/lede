@@ -7,7 +7,7 @@
 
 / {
 	compatible = "fcj,g-ax1800-f", "mediatek,mt7621-soc";
-	model = "FCJ G-AX1800-F";
+	model = "360 T6GS";
 
 	aliases {
 		led-boot = &led_sys_red;
