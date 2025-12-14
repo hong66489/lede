@@ -10,7 +10,7 @@
 	model = "360 T6GS";
 
 	aliases {
-		led-boot = &led_sys_red;
+		led-boot = &led_sys_green;
 		led-failsafe = &led_sys_green;
 		led-running = &led_sys_green;
 		led-upgrade = &led_sys_green;
@@ -25,8 +25,8 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led_sys_red: red {
-			label = "red:sys";
+		led_sys_green: green {
+			label = "green:sys";
 			gpios = <&gpio 13 GPIO_ACTIVE_HIGH>;
 		};
 
