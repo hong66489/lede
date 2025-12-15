@@ -27,11 +27,6 @@
 
 		led_sys_green: green {
 			label = "green:sys";
-			gpios = <&gpio 13 GPIO_ACTIVE_HIGH>;
-		};
-
-		led_sys_green: green {
-			label = "green:sys";
 			gpios = <&gpio 15 GPIO_ACTIVE_HIGH>;
 		};
 	};
