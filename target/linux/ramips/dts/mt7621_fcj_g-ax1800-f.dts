@@ -10,8 +10,8 @@
 	model = "360 T6GS";
 
 	aliases {
-		led-boot = &led_sys_green;
-		led-failsafe = &led_sys_green;
+		led-boot = &led_sys_red;
+		led-failsafe = &led_sys_red;
 		led-running = &led_sys_green;
 		led-upgrade = &led_sys_green;
 		label-mac-device = &gmac0;
@@ -24,6 +24,11 @@
 
 	leds {
 		compatible = "gpio-leds";
+
+		led_sys_red: red {
+			label = "red:sys";
+			gpios = <&gpio 13 GPIO_ACTIVE_HIGH>;
+		};
 
 		led_sys_green: green {
 			label = "green:sys";
