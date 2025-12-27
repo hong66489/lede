@@ -10,10 +10,10 @@
 	model = "360 T6GS";
 
 	aliases {
-		led-boot = &led_sys_red;
-		led-failsafe = &led_sys_red;
-		led-running = &led_sys_green;
-		led-upgrade = &led_sys_green;
+		led-boot = &led_status_red;
+		led-failsafe = &led_status_red;
+		led-running = &led_status_blue;
+		led-upgrade = &led_status_blue;
 		label-mac-device = &gmac0;
 	};
 
@@ -25,14 +25,16 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led_sys_red: red {
-			label = "red:sys";
-			gpios = <&gpio 14 GPIO_ACTIVE_HIGH>;
+		led_status_red: status_red {
+			label = "red:status";
+			gpios = <&gpio 13 GPIO_ACTIVE_HIGH>;
 		};
 
-		led_sys_green: green {
-			label = "green:sys";
-			gpios = <&gpio 15 GPIO_ACTIVE_HIGH>;
+		led_status_blue: status_blue {
+			label = "blue:status";
+			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
+		};
+&gpio 15 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
@@ -58,8 +60,7 @@
 
 	mediatek,nmbm;
 	mediatek,bmt-max-ratio = <1>;
-	mediatek,bmt-max-reserved-blocks = <64>;
-	mediatek,bmt-remap-range = <0x0000000 0x0a00000>;
+	mediatek	mediatek,bmt-remap-range = <0x0000000 0x0a00000>;
 
 	partitions {
 		compatible = "fixed-partitions";
