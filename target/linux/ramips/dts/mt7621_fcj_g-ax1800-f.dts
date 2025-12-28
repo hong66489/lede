@@ -34,8 +34,6 @@
 			label = "blue:status";
 			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
 		};
-&gpio 15 GPIO_ACTIVE_HIGH>;
-		};
 	};
 
 	keys {
