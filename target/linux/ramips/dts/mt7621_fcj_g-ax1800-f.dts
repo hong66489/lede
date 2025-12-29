@@ -27,7 +27,7 @@
 
 		led_status_red: red {
 			label = "red:status";
-			gpios = <&gpio 13 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio 14 GPIO_ACTIVE_HIGH>;
 		};
 
 		led_status_green: green {
